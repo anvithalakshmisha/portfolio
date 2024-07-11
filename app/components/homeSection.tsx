@@ -1,6 +1,5 @@
 "use client"
 import { useEffect, useState } from "react";
-import Section from "./section";
 
 const HomeSection = () => {
   const [text, setText] = useState('');
@@ -24,12 +23,11 @@ const HomeSection = () => {
   }, []);
 
   return (
-    <Section id="home" title="Home">
       <div className="flex flex-col items-center justify-center min-h-screen">
-        <h1 className="text-6xl font-bold text-center">
-          Welcome to Anvitha&apos;s Portfolio!
+        <h1 className="text-6xl font-bold text-center mb-4">
+          Anvitha Lakshmisha
         </h1>
-        <p className="text-xl mt-4 text-center">
+        <p className="text-xl text-center mb-8">
           {text}
           {isTypingComplete && (
             <>
@@ -38,7 +36,6 @@ const HomeSection = () => {
           )}
         </p>
       </div>
-    </Section>
   );
 };
 
