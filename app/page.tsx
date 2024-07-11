@@ -83,7 +83,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <h3 className="text-2xl font-bold">Cloud-Based Result Management System <a href="https://github.com/anvithalakshmisha/cloudClass" target="_blank" className="text-blue-600 hover:underline font-bold">↗</a></h3>
+            <h3 className="text-2xl font-bold">Cloud-Based Result Management System {/* <a href="https://github.com/anvithalakshmisha/cloudClass" target="_blank" className="text-blue-600 hover:underline font-bold">↗</a>*/}</h3> 
             <Badge text="NodeJS"></Badge>
             <Badge text="AWS CloudFormation"></Badge>
             <Badge text="EC2"></Badge>
@@ -96,7 +96,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <h3 className="text-2xl font-bold">Sprint Planner <a href="https://github.com/anvithalakshmisha/sprintPlanner" target="_blank" className="text-blue-600 hover:underline font-bold">↗</a></h3>
+            <h3 className="text-2xl font-bold">Sprint Planner {/*<a href="https://github.com/anvithalakshmisha/sprintPlanner" target="_blank" className="text-blue-600 hover:underline font-bold">↗</a>*/}</h3>
             <Badge text="React"></Badge>
             <Badge text="Javascript"></Badge>
             <Badge text="HTML"></Badge>
@@ -109,7 +109,7 @@ export default function Home() {
             <Badge text="PlotlyJS"></Badge>
             <Badge text="Redux"></Badge>
             <p>
-              A sprint planner organizes tasks through statuses and transitions in an issues lifecycle, aligning with agile methodologies for scrum teams. It tracks software issues and bugs, offers graphical progress tracking, customizable issue filtering, email notifications, stakeholder connectivity, and ticket linking for streamlined issue resolution.
+              A sprint planner organizes tasks through statuses and transitions in an issue&apos;s lifecycle, aligning with agile methodologies for scrum teams. It tracks software issues and bugs, offers graphical progress tracking, customizable issue filtering, email notifications, stakeholder connectivity, and ticket linking for streamlined issue resolution.
             </p>
           </div>
         </div>
