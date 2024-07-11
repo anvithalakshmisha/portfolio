@@ -27,7 +27,7 @@ const HomeSection = () => {
     <Section id="home" title="Home">
       <div className="flex flex-col items-center justify-center min-h-screen">
         <h1 className="text-6xl font-bold text-center">
-          Welcome to Anvitha's Portfolio!
+          Welcome to Anvithas Portfolio!
         </h1>
         <p className="text-xl mt-4 text-center">
           {text}

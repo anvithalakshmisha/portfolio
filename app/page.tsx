@@ -8,21 +8,6 @@ export default function Home() {
     <Layout>
       <HomeSection></HomeSection>
 
-      {/* <Section id="about" title="About">
-        <p>
-          I have a Master of Science in Information Systems from Northeastern University and a Bachelor of Engineering in Computer Science from Nitte Mahalinga Adyanthaya Memorial Institute of Technology. I am passionate about developing innovative solutions and have experience working with various technologies.
-        </p>
-      </Section> */}
-
-      {/* <Section id="skills" title="Skills">
-        <ul className="list-disc pl-6">
-          <li>Web Technologies: HTML5, CSS3, Angular, JavaScript, TypeScript, React, NextJS, ExpressJS, Mongoose, Gatsby, NodeJS, MongoDB, React context, Jasmine, Karma, Cypress, Mocha, Jest</li>
-          <li>Mobile Technologies: Swift, XCode, UIKit, CoreData, CoreLocation, MapKit, Storyboards, View Controllers</li>
-          <li>Programming Languages: Python, Java, C++</li>
-          <li>Other tools: GIT, MySQL, AWS CloudFormation, Moqups, Balsamiq, Figma, GA4, GTM, NPM, Babel</li>
-        </ul>
-      </Section> */}
-
       <Section id="work" title="Work Experience">
         <div className="space-y-4">
           <div>
@@ -124,7 +109,7 @@ export default function Home() {
             <Badge text="PlotlyJS"></Badge>
             <Badge text="Redux"></Badge>
             <p>
-              A sprint planner organizes tasks through statuses and transitions in an issue's lifecycle, aligning with agile methodologies for scrum teams. It tracks software issues and bugs, offers graphical progress tracking, customizable issue filtering, email notifications, stakeholder connectivity, and ticket linking for streamlined issue resolution.
+              A sprint planner organizes tasks through statuses and transitions in an issues lifecycle, aligning with agile methodologies for scrum teams. It tracks software issues and bugs, offers graphical progress tracking, customizable issue filtering, email notifications, stakeholder connectivity, and ticket linking for streamlined issue resolution.
             </p>
           </div>
         </div>
