@@ -1,41 +1,68 @@
-"use client"
-import { useEffect, useState } from "react";
+"use client";
+import { useEffect, useMemo, useState } from "react";
+import Image from "@/node_modules/next/image";
 
 const HomeSection = () => {
-  const [text, setText] = useState('');
-  const [isTypingComplete, setIsTypingComplete] = useState(false);
+  const [textIndex, setTextIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(100); // Typing speed
+
+  const texts = useMemo(() => [
+    "I am a dedicated software engineer.",
+    "Skilled in Full stack development.",
+    "Committed to continuous learning in AI.",
+    "Passionate about web and mobile development.",
+  ], []);
 
   useEffect(() => {
-    const introText = "I am a dedicated software engineer with a Master's degree in Information Systems and a proven track record in web and mobile development. Skilled in HTML5, CSS3, JavaScript frameworks, and backend technologies like Node.js and MongoDB. I uphold integrity and collaboration as foundational values in my work, consistently delivering innovative solutions and fostering positive team dynamics. With a passion for continuous learning, I am committed to expanding my expertise in AI and cloud computing. My goal is to leverage technology to solve complex challenges and drive impactful outcomes in the software industry.";
-
-    let currentIndex = 0;
-    const interval = setInterval(() => {
-      if (currentIndex <= introText.length) {
-        setText(introText.substring(0, currentIndex));
-        currentIndex++;
+    const handleTyping = () => {
+      const currentText = texts[textIndex];
+      if (isDeleting) {
+        setDisplayedText(currentText.substring(0, displayedText.length - 1));
+        setTypingSpeed(50); // Speed up deleting
       } else {
-        clearInterval(interval);
-        setIsTypingComplete(true);
+        setDisplayedText(currentText.substring(0, displayedText.length + 1));
+        setTypingSpeed(100); // Normal typing speed
       }
-    }, 30); // Adjust typing speed (ms) as needed
 
-    return () => clearInterval(interval);
-  }, []);
+      if (!isDeleting && displayedText === currentText) {
+        setTimeout(() => setIsDeleting(true), 500); // Delay before starting to delete
+      } else if (isDeleting && displayedText === "") {
+        setIsDeleting(false);
+        setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+      }
+    };
+
+    const typingTimeout = setTimeout(handleTyping, typingSpeed);
+
+    return () => clearTimeout(typingTimeout);
+  }, [displayedText, isDeleting, typingSpeed, textIndex, texts]);
 
   return (
-      <div className="flex flex-col items-center justify-center min-h-screen">
-        <h1 className="text-6xl font-bold text-center mb-4">
+    <div className="flex flex-row items-center justify-center my-8">
+      <div className="flex-grow text-center">
+        <h1 className="text-6xl font-bold mb-4">
           Anvitha Lakshmisha
         </h1>
-        <p className="text-xl text-center mb-8">
-          {text}
-          {isTypingComplete && (
-            <>
-              <span className="text-blue-500"> |</span> {/* Blinking cursor effect */}
-            </>
-          )}
+        <p className="text-xl mt-4">
+          {displayedText}
+          <span className="text-blue-500">|</span>
         </p>
       </div>
+      <Image
+        src="/Anvitha.jpg"
+        alt="Anvitha Lakshmisha"
+        width={150}
+        height={150}
+        className="rounded-full ml-4"
+        style={{
+          objectFit: "cover",
+          height: "200px",
+          width: "200px",
+        }}
+      />
+    </div>
   );
 };
 

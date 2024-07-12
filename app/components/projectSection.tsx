@@ -3,6 +3,12 @@ import Section from "./section";
 
 const projects = [
     {
+        title: 'Portfolio Website',
+        description: 'Developed a personal portfolio website to showcase my professional experience, projects, and skills. The website features a clean and modern design with interactive elements and responsive layouts to provide an optimal viewing experience across various devices. The portfolio serves as a comprehensive digital resume and project showcase.',
+        badges: ['NextJS', 'Typescript', 'tailwind', 'HTML'],
+        link: 'https://github.com/anvithalakshmisha/portfolio',
+    },
+    {
       title: 'Travel Diary Application',
       description: 'Developed a Travel Diary App in Swift with Storyboards, featuring interactive maps using MapKit and Core Location for visual travel route representation and current location tracking.',
       badges: ['Swift', 'XCode', 'UIKit', 'CoreData', 'CoreLocation', 'MapKit', 'Storyboards', 'View Controllers'],

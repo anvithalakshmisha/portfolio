@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from '@/node_modules/next/head';
+import Link from '@/node_modules/next/link';
 import React from 'react';
 import ContactMe from './contactMe';
 
@@ -15,9 +15,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
     </Head>
     <header className="bg-gray-400 p-4 text-white fixed w-full z-10">
       <nav className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Anvitha Lakshmisha</h1>
+        {/* <h1 className="text-2xl font-bold">Anvitha Lakshmisha</h1> */}
         <ContactMe/>
         <ul className="flex space-x-4 text-xl">
+          <li><Link href="#about">About</Link></li>
           <li><Link href="#work">Work</Link></li>
           <li><Link href="#projects">Projects</Link></li>
           <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
