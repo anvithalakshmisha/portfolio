@@ -28,7 +28,7 @@ const projects = [
       },
       {
         title: 'Sprint Planner',
-        description: 'A sprint planner organizes tasks through statuses and transitions in an issue&apos;s lifecycle, aligning with agile methodologies for scrum teams. It tracks software issues and bugs, offers graphical progress tracking, customizable issue filtering, email notifications, stakeholder connectivity, and ticket linking for streamlined issue resolution. data analysis.',
+        description: `A sprint planner organizes tasks through statuses and transitions in an issue's lifecycle, aligning with agile methodologies for scrum teams. It tracks software issues and bugs, offers graphical progress tracking, customizable issue filtering, email notifications, stakeholder connectivity, and ticket linking for streamlined issue resolution. data analysis.`,
         badges: ['React', 'Javascript', 'HTML', 'SASS', 'NodeJS', 'ExpressJS', 'MongoDB', 'Mangoose', 'MaterialUI', 'PlotlyJS', 'Redux'],
         link: 'https://github.com/anvithalakshmisha/JobApplicationTrackerDatabase',
       },
